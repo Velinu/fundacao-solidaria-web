@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+}
+
+main form{
+    grid-column: 2;
+}
+
+main ul {
+    grid-column: 2;
+}
+
+main form input[type='text']{
+    width: 50%;
+    height: 2vh;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.11);
+    padding: 15px;
+}
+
+main form input[type='text']:focus{
+    border: 2px solid #009EDB;
+    outline: none;
+}
+
+

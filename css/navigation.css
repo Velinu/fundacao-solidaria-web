@@ -1,0 +1,30 @@
+nav a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.7px;
+}
+
+nav ul{
+    border: none;
+    margin: 0;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+}
+
+nav ul a{
+    width: 20vw;
+    height: 3vh;
+    position: relative;
+}
+
+nav ul a:after{
+    position: absolute;
+    content: '';
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #E5563B;
+}
