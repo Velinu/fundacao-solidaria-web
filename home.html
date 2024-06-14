@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fundaçao solidaria</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/navigation.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="navigation.css" />
   </head>
   <body>
     <header>
@@ -16,7 +16,7 @@
       </div>
       <div class="user-container">
         <img src="" alt="" />
-        <p>Maria Aparecida</p>
+        <button id="open-login">Login</button>
       </div>
     </header>
     <nav>
@@ -28,22 +28,18 @@
       </ul>
     </nav>
     <main>
-      <form action="">
-        <input
-          type="text"
-          name=""
-          id="searchText"
-          placeholder="Encontre instituições"
-        />
-      </form>
-      <ul>
-        <li>
-          <img src="" alt="img" />
-          <h2>Fundação esperança Renovada</h2>
-          <p>qualquer coisa escrita para ficar top</p>
-          <button><a href="#">Ver mais</a></button>
-        </li>
-      </ul>
+      <button id="get-ongs">Ver ONGs disponíveis</button>
+      <ul id="ongs-ul"></ul>
+      <dialog id="ong-dialog">
+        <div class="ong-dialog">
+          <button id="close-modal-btn">Fechar</button>
+          <input id="email" type="text" placeholder="Email" />
+          <input id="senha" type="text" placeholder="Senha" />
+          <input id="login-submit" type="button" value="Logar" />
+        </div>
+      </dialog>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

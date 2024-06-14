@@ -8,16 +8,21 @@ main{
     grid-template-columns: 10vw 80vw 10vw;
 }
 
-main form{
+#get-ongs{
     grid-column: 2;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: #009EDB;
 }
 
-main ul {
+main ul, .ong-info {
     grid-column: 2;
 }
 
 main form input[type='text']{
-    width: 50%;
+    width: 80%;
     height: 2vh;
     border-radius: 10px;
     border: none;
@@ -28,6 +33,14 @@ main form input[type='text']{
 main form input[type='text']:focus{
     border: 2px solid #009EDB;
     outline: none;
+}
+
+
+.ong-dialog{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
