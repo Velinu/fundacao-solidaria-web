@@ -17,6 +17,7 @@ nav ul a{
     width: 20vw;
     height: 3vh;
     position: relative;
+    padding: 5px 0px;
 }
 
 nav ul a:after{
@@ -27,4 +28,5 @@ nav ul a:after{
     width: 50%;
     height: 3px;
     background-color: #E5563B;
+    margin-top: 5px;
 }

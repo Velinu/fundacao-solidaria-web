@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: sans-serif;
 }
 
 .main {
@@ -21,7 +21,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -33,6 +33,9 @@ main{
 
 .ong-data-content{
   display: flex;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .ong-content {
@@ -53,6 +56,8 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: justify;
+  padding: 0px 10px;
 }
 
 .donation-container {

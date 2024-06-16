@@ -2,16 +2,11 @@
 
 const ongsUl = document.querySelector('#ongs-ul')
 const a = document.querySelector('#ancora')
-const form = document.querySelector('#search-form')
 const baseUrl  = 'http://fundacao-solidaria-api.us-west-2.elasticbeanstalk.com/'
-//const baseUrl = 'http://localhost:8080/'  
 const  closeModal = document.querySelector('#close-modal-btn')
 const openLogin = document.querySelector('#open-login')
 const loginSubmit = document.querySelector('#login-submit')
 const getOngsButton = document.querySelector('#get-ongs')
-/*     "email": "teste@email.com",
-    "password": "senha123" */
-
 openLogin.addEventListener('click', () => {
     document.querySelector('dialog').showModal()
 })
@@ -28,22 +23,20 @@ loginSubmit.addEventListener('click', async (event) => {
     document.querySelector('dialog').close()
 })
 
-getOngsButton.addEventListener('click', async (event) => {
-    event.preventDefault();
+async function renderAllOngs () {
     const ongs = await getAllOngs()
     ongsUl.innerHTML = ''
     ongsUl.style.listStyle = 'none'
     ongs.forEach(ong => {
         const div = document.createElement('div')
         div.style.display = 'flex'
+        div.style.padding = '20px 0px'
         div.style.flexDirection = 'row'
         div.style.gridTemplateRows = 'auto auto auto auto'
         const li = document.createElement('li')
         li.style.marginTop = '2.5vh'
         li.style.marginBottom = '2.5vh'
         li.appendChild(div)
-
-        
 
         const img = document.createElement('img')
         img.style.maxWidth = '19vw'
@@ -84,10 +77,11 @@ getOngsButton.addEventListener('click', async (event) => {
         const a = document.createElement('a')
         a.textContent = 'Ver mais'
         a.style.textDecoration = 'none'
+        a.style.fontWeight = 'bold'
         a.style.color = 'white'
         a.style.width = '100%'
         a.style.borderRadius = '5px'
-        a.style.padding = '5px'
+        a.style.padding = '10px 0px'
         a.style.textAlign = 'center'
         a.style.backgroundColor = '#009EDB'
         a.href = `ong.html?id=${ong.id}`
@@ -96,10 +90,8 @@ getOngsButton.addEventListener('click', async (event) => {
         div.appendChild(contentDiv)
 
         ongsUl.appendChild(li)
-            
-
     })
-})
+}
 
 async function getAllOngs() {
     const token = sessionStorage.getItem('token')
@@ -112,7 +104,6 @@ async function getAllOngs() {
         },
     })
     const data = await response.json()
-    console.log(data)
     return data
 }
 
@@ -138,8 +129,6 @@ async function auth(email, password) {
     }
 }
 
-form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    await auth('teste@email.com', 'senha123')
-    console.log(token)
+document.addEventListener('DOMContentLoaded', async () => {
+    await renderAllOngs();
 })

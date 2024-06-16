@@ -1,11 +1,12 @@
 body{
     margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: sans-serif;
 }
 
 main{
+    margin: 20px 0px;
     display: grid;
-    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-columns: 15vw 70vw 15vw;
 }
 
 #get-ongs{
@@ -35,12 +36,47 @@ main form input[type='text']:focus{
     outline: none;
 }
 
-
-.ong-dialog{
-    height: 15vh;
+.ong-dialog {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     justify-content: space-around;
+    padding: 10px 0px;
 }
 
+.ong-dialog > input {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.11);
+    padding: 15px;
+}
 
+#ong-dialog {
+    background-color: white;
+    color: #000000;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 20vw;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#login-submit {
+    background-color: #009EDB;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+#open-login {
+    background-color: white;
+    color: #000000;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+#close-modal-btn:hover {
+    cursor: pointer;
+}

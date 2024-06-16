@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="navigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
     <header>
       <div class="welcome-container">
-        <img src="" alt="" />
-        <p>Seja bem-vindo(a)</p>
+        <p id="welcome-label">Seja bem-vindo(a)</p>
       </div>
       <div class="user-container">
-        <img src="" alt="" />
         <button id="open-login">Login</button>
       </div>
     </header>
@@ -23,16 +25,18 @@
       <ul>
         <a href="#">Início</a>
         <a href="#">Para onde doar</a>
-        <a href="#">Objetivos de Desenvolvimento Sustentável</a>
+        <a href="#">Desenvolvimento Sustentável</a>
         <a href="#">Erradicação da pobreza</a>
       </ul>
+      <hr />
     </nav>
     <main>
-      <button id="get-ongs">Ver ONGs disponíveis</button>
       <ul id="ongs-ul"></ul>
       <dialog id="ong-dialog">
         <div class="ong-dialog">
-          <button id="close-modal-btn">Fechar</button>
+          <span id="close-modal-btn" class="material-symbols-outlined">
+            close
+          </span>
           <input id="email" type="text" placeholder="Email" />
           <input id="senha" type="text" placeholder="Senha" />
           <input id="login-submit" type="button" value="Logar" />
@@ -40,6 +44,6 @@
       </dialog>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
